@@ -1,0 +1,156 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "프로그래밍 기초",
+      "sub_title": "Python으로 배우는 '프로그래밍 기초'",
+      "language": "Python",
+      "prerequire": [],
+      "instructor": [
+        "강영훈"
+      ],
+      "description": "웹/앱 개발, 데이터 분석, 인공지능/머신러닝, 업무 자동화 등으로 나아가기 위한 첫 걸음입니다. 똑똑해지는 것은 덤이지요. 입문자 분들께 추천해요!"
+    },
+    {
+      "id": 3,
+      "title": "자바 기초",
+      "sub_title": "Java로 배우는 '자바 기초'",
+      "language": "Java",
+      "prerequire": [
+        "프로그래밍 기초"
+      ],
+      "instructor": [
+        "김신의",
+        "강영훈"
+      ],
+      "description": "가장 꾸준한 인기 언어, 앱 개발과 웹 개발의 핵심 언어, 자바를 코드잇에서 배워보세요! 자연스럽게 객체 지향의 개념도 함께 배울 수 있습니다."
+    },
+    {
+      "id": 4,
+      "title": "웹 퍼블리싱",
+      "sub_title": "HTML/CSS로 배우는 '웹 퍼블리싱'",
+      "language": "HTML/CSS",
+      "prerequire": [],
+      "instructor": [
+        "강영훈",
+        "손동욱"
+      ],
+      "description": "코드잇의 ‘HTML/CSS로 배우는 웹 퍼블리싱’은 인터랙티브한 웹사이트/웹 어플리케이션을 개발하는 첫 걸음이에요. 번뜩이는 아이디어로 나만의 웹사이트를 만들어보세요!"
+    },
+    {
+      "id": 5,
+      "title": "인터랙티브 웹",
+      "sub_title": "JavaScript로 배우는 '인터렉티브 웹'",
+      "language": "JavaScript/jQuery",
+      "prerequire": [
+        "프로그래밍 기초",
+        "웹 퍼블리싱"
+      ],
+      "instructor": [
+        "강영훈",
+        "손동욱"
+      ],
+      "description": "웹코드잇의 ‘JavaScript로 배우는 인터랙티브 웹’은 인터랙티브한 웹사이트/웹 어플리케이션을 직접 개발하는 강좌입니다. 번뜩이는 아이디어로 나만의 웹사이트를 만들어보세요!"
+    },
+    {
+      "id": 7,
+      "title": "데이터 사이언스 입문",
+      "sub_title": "Python으로 배우는 '데이터 사이언스 입문'",
+      "language": "Python",
+      "prerequire": [
+        "프로그래밍 기초"
+      ],
+      "instructor": [
+        "강영훈",
+        "손동욱",
+        "이영준"
+      ],
+      "description": "데이터에 대한 이해와, 데이터를 다룰 수 있는 능력은 여러분에게 엄청난 경쟁력이될 것입니다. 수학, 통계 지식이 전혀 없어도 괜찮습니다. 실무에 쓰이는 실습을 통해 역량을 키워보세요!"
+    },
+    {
+      "id": 8,
+      "title": "알고리즘의 정석",
+      "sub_title": "Python으로 배우는 '알고리즘의 정석'",
+      "language": "Python",
+      "prerequire": [
+        "프로그래밍 기초"
+      ],
+      "instructor": [
+        "강영훈",
+        "손동욱"
+      ],
+      "description": "개발자와 알고리즘은 떼려야 뗄 수 없는 애증의 관계입니다. 입사와 이직 인터뷰를 위해서도 필수적이고, 코드의 성능을 위해서도 꼭 배워야하죠. 이번 기회에 코드잇과 함께, 개발자로서 한 단계 확실한 레벨업을 해보세요!"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "target_id": 1,
+      "type": "Course",
+      "status": "Published",
+      "retailPrice": 159000,
+      "currentPrice": 119000
+    },
+    {
+      "id": 2,
+      "target_id": 3,
+      "type": "Course",
+      "status": "Published",
+      "retailPrice": 159000,
+      "currentPrice": 119000
+    },
+    {
+      "id": 3,
+      "target_id": 4,
+      "type": "Course",
+      "status": "Published",
+      "retailPrice": 159000,
+      "currentPrice": 119000
+    },
+    {
+      "id": 4,
+      "target_id": 5,
+      "type": "Course",
+      "status": "Published",
+      "retailPrice": 159000,
+      "currentPrice": 119000
+    },
+    {
+      "id": 5,
+      "target_id": 7,
+      "type": "Course",
+      "status": "Published",
+      "retailPrice": 159000,
+      "currentPrice": 119000
+    },
+    {
+      "id": 6,
+      "target_id": 8,
+      "type": "Course",
+      "status": "Published",
+      "retailPrice": 159000,
+      "currentPrice": 119000
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "captain",
+      "email": "captain@codeit.kr",
+      "pwd": "123456",
+      "role": "member",
+      "darkTheme": true
+    },
+    {
+      "id": 1,
+      "name": "capcap",
+      "email": "rainbow618@nate.coom",
+      "pwd": "1234",
+      "role": "user",
+      "darkTheme": false
+    }
+  ],
+  "questions": [],
+  "newQuestionId": 0,
+  "newUserId": 2
+}
