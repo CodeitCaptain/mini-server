@@ -137,20 +137,30 @@
       "id": 0,
       "name": "captain",
       "email": "captain@codeit.kr",
-      "pwd": "123456",
-      "role": "member",
-      "darkTheme": true
+      "pwd": "12345678",
+      "role": "admin",
+      "darkTheme": false,
+      "profilePhoto": "https://codeit.s3.amazonaws.com/uploads/profile/photo/9620/thumb_%E1%84%83%E1%85%A2%E1%84%8B%E1%85%B1.png?X-Amz-Expires=600&X-Amz-Date=20190816T061129Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJUTR7YIK6O2TLJ7Q/20190816/us-east-1/s3/aws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=800d152507d72706be9386b43b013fc7c14a2b5fa4810a44c91230932fb18dae"
     },
     {
       "id": 1,
-      "name": "capcap",
-      "email": "rainbow618@nate.coom",
-      "pwd": "1234",
+      "name": "서지녁",
+      "email": "seoji@codeit.kr",
+      "pwd": "123456",
       "role": "user",
+      "darkTheme": false,
+      "profilePhoto": "https://avatars2.githubusercontent.com/u/30362922?s=460&v=4"
+    },
+    {
+      "id": 2,
+      "name": "재하",
+      "email": "jaeha@codeit.kr",
+      "pwd": "1234567",
+      "role": "member",
       "darkTheme": false
     }
   ],
   "questions": [],
   "newQuestionId": 0,
-  "newUserId": 2
+  "newUserId": 3
 }

@@ -19,14 +19,14 @@ exports.login = async (req, res) => {
       role: user.role,
     }
     const token = await generateToken(tokenData)
-    console.log("token", token)
-    res.cookie('user', token, { httpOnly: true, maxAge: 1000 * 60 * 60 * 24 * 7 })
+    console.log("Created Token", token)
     res.json({
       token: token,
       user: user
     })
   } else {
-    res.status(500).send({msg: '로그인에 실패했습니다.'})
+    user || res.status(500).send({msg: "존재하지 않는 이메일 입니다."})
+    user && res.status(500).send({msg: "비밀번호가 틀립니다."})
   }
 };
 
@@ -41,7 +41,7 @@ exports.register = async (req, res) => {
   }
   const isDuplicated = users.find(u => u.email == req.body.email).value()
   if(isDuplicated){
-    res.status(500).send('duplicated email')
+    res.status(500).send({msg: "중복된 이메일 입니다."})
   } else {
     const tokenData = {
       id: db.get("newUserId").value(),
@@ -50,10 +50,9 @@ exports.register = async (req, res) => {
       role: "user"
     }
     const token = await generateToken(tokenData)
-    console.log('token', token)
+    console.log('Created Token', token)
     await users.push(newUser).write()
     await db.update('newUserId', n => n + 1).write()
-    res.cookie('user', token, { httpOnly: true, maxAge: 1000 * 60 * 60 * 24 * 7 })
     res.json({
       token: token,
       user: newUser
@@ -68,8 +67,8 @@ exports.logout = (req, res) => {
 }
 
 exports.fetch = async (req, res) => {
-  const token = req.cookies.user
-  console.log("check token", token)
+  const token = req.body.tkn
+  console.log("Check token", token)
   if(token){
     const tokenData = await decodeToken(token)
     const user = await users.find(u => u.id == tokenData.id).value()
@@ -79,6 +78,7 @@ exports.fetch = async (req, res) => {
       name: tokenData.name,
       role: tokenData.role,
       darkTheme: user.darkTheme,
+      profilePhoto: user.profilePhoto
     })
   }
 }
