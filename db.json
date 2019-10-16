@@ -139,7 +139,7 @@
       "email": "captain@codeit.kr",
       "pwd": "12345678",
       "role": "admin",
-      "darkTheme": true,
+      "darkTheme": false,
       "profilePhoto": ""
     },
     {

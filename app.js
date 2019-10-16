@@ -10,8 +10,12 @@ app.use(cors({
   credentials: true
 }))
 app.use(cookieParser());
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({
+  limit: '50mb'
+}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 //api route
 app.use('/courses', require('./api/courses'));
@@ -20,7 +24,9 @@ app.use('/questions', require('./api/questions'));
 app.use('/users', require('./api/users'));
 
 //Welcome index
-app.get('/', (req, res) => {res.send('Hi Express!');});
+app.get('/', (req, res) => {
+  res.send('Hi Express!');
+});
 
 //Start
 const PORT = 8000;
